@@ -6,10 +6,9 @@ import { copyFileSync, existsSync } from 'fs';
 export default defineConfig(({ mode }) => {
     const env = loadEnv(mode, '.', '');
     // Support GitHub Pages deployment with base path
-    // Set base to '/awesomebank-learning-path/' if deploying to GitHub Pages
-    // Or use process.env.GITHUB_REPOSITORY to auto-detect
+    // Set base to match your GitHub repository name
     const base = process.env.GITHUB_PAGES === 'true' || process.env.GITHUB_REPOSITORY 
-      ? '/awesomebank-learning-path/' 
+      ? '/salesforcemanual/' 
       : '/';
     
     return {
